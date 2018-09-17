@@ -2,10 +2,9 @@ import datetime
 
 
 def log(msg, logfile):
-    f = open(logfile, "a")
     curtime = str(datetime.datetime.now())
-    f.write(curtime)
-    f.write("    ")
-    f.write(msg) 
-    f.write("\n")
-    f.close()
+    with open(logfile, "a") as f:    
+        f.write("\n\n")
+        f.write("time: " + curtime)
+        f.write("\n")
+        f.write("message: " + msg)
