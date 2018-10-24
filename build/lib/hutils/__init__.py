@@ -1,7 +1,16 @@
 import datetime
+import platform
 
+def log(msg):
+    
+    cur_sys = platform.system()   # cur_sys = ['Windows', 'Linux', etc.]
+    if cur_sys == 'Windows':
+        logfile = 'D:/research/Logs/ExecutionLog/embermd.txt'
+    elif cur_sys == 'Linux':
+        logfile = '/home/mira/research/Logs/ExecutionLog/embermd.txt'
+    else:
+        raise RuntimeError('unknown system')
 
-def log(msg, logfile):
     curtime = str(datetime.datetime.now())
     with open(logfile, "a") as f:    
         f.write("\n\n")
