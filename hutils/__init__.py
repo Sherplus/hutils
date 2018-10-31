@@ -5,7 +5,7 @@ def log(msg):
     
     cur_sys = platform.system()   # cur_sys = ['Windows', 'Linux', etc.]
     if cur_sys == 'Windows':
-        logfile = 'D:/research/Logs/ExecutionLog/embermd.txt'
+        logfile = 'D:\\research\\Logs\\ExecutionLog\\embermd.txt'
     elif cur_sys == 'Linux':
         logfile = '/home/mira/research/Logs/ExecutionLog/embermd.txt'
     else:
@@ -21,7 +21,7 @@ def log(msg):
 def get_research_dataset_dir():
     cur_sys = platform.system()   # cur_sys = ['Windows', 'Linux', etc.]
     if cur_sys == 'Windows':
-        return 'D:/research/dataset'
+        return 'D:\\research\\dataset'
     elif cur_sys == 'Linux':
         return '/home/mira/research/dataset'
     else:
